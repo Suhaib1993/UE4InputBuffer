@@ -4,7 +4,7 @@ using UnrealBuildTool;
 
 public class InputBufferEditor : ModuleRules
 {
-	public InputBufferEditor(TargetInfo Target)
+	public InputBufferEditor(ReadOnlyTargetRules parameter)
 	{
 		
 		// ... add public include paths required here ...

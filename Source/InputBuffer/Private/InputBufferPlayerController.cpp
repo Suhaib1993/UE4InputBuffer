@@ -1,11 +1,12 @@
 // Copyright 2017 Isaac Hsu. MIT License
 
+#include "InputBufferPlayerController.h"
 #include "InputBufferPrivatePCH.h"
 #include "Engine/InputDelegateBinding.h"
 #include "DisplayDebugHelpers.h"
 
 #include "InputBufferComponent.h"
-#include "InputBufferPlayerController.h"
+
 
 
 FName AInputBufferPlayerController::InputBufferComponentName(TEXT("InputBuffer"));

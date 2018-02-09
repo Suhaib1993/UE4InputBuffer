@@ -31,15 +31,15 @@ struct FBufferedInputEventSetup
 	{}
 
 	/** Whether this event is enabled. */
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Input Buffer")
 	bool bEnabled;
 
 	/** Name of input event, e.g "Jump" */
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Input Buffer")
 	FName Name;
 
 	/** Type of the input event. */
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Input Buffer")
 	FBufferedInputEventType Type;
 
 	/** Should the event get triggered even when the game is paused? */
@@ -47,11 +47,11 @@ struct FBufferedInputEventSetup
 	bool bExecuteWhenPaused;
 
 	/** Name of key mapping to use for this event. */
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Input Buffer")
 	FName KeyMappingName;
 
 	/** Keys to bind it to. */
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Input Buffer")
 	TArray<FKey> Keys;
 };
 
@@ -63,11 +63,11 @@ struct FBufferedInputEventKeyMapping
 	FBufferedInputEventKeyMapping() : Name(NAME_None) {}
 
 	/** Name of this mapping. */
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Input Buffer")
 	FName Name;
 
 	/** Keys to bind it to. */
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Input Buffer")
 	TArray<FKey> Keys;
 };
  

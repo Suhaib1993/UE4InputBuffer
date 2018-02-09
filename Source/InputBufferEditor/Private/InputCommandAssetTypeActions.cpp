@@ -1,8 +1,9 @@
 // Copyright 2017 Isaac Hsu. MIT License
 
+#include "InputCommandAssetTypeActions.h"
 #include "InputBufferEditor.h"
 
-#include "InputCommandAssetTypeActions.h"
+
 #include "InputCommand.h"
 
 #define LOCTEXT_NAMESPACE "AssetTypeActions"

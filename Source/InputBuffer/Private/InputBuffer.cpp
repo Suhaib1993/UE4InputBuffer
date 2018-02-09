@@ -1,5 +1,5 @@
 // Copyright 2017 Isaac Hsu. MIT License
-
+#include "InputBuffer.h"
 #include "InputBufferPrivatePCH.h"
 
 #define LOCTEXT_NAMESPACE "InputBuffer"

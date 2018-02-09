@@ -1,7 +1,8 @@
 // Copyright 2017 Isaac Hsu. MIT License
 
-#include "InputBufferEditor.h"
 #include "InputCommandFactory.h"
+#include "InputBufferEditor.h"
+
 #include "InputCommand.h"
 
 UInputCommandFactory::UInputCommandFactory(const FObjectInitializer& ObjectInitializer)

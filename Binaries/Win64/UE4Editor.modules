@@ -1,0 +1,9 @@
+{
+	"Changelist" : 0,
+	"BuildId" : "3f7f6a98-6de3-457c-a7d8-3bde8c65f0aa",
+	"Modules" : 
+	{
+		"InputBuffer" : "UE4Editor-InputBuffer.dll",
+		"InputBufferEditor" : "UE4Editor-InputBufferEditor.dll"
+	}
+}

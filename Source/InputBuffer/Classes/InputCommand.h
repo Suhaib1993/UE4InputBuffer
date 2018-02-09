@@ -19,31 +19,31 @@ struct FInputCommandEntry
 	{}
 
 	/* Input events to match. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input Buffer")
 	TArray<FName> EventsToMatch;
 
 	/* Input events to ignore. Unused if bIgnoreOthers is true. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input Buffer")
 	TArray<FName> EventsToIgnore;
 
 	/* If true, ignore the presence of the other input events except EventsToMatch. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input Buffer")
 	bool bIgnoreOthers;
 
 	/* Minimal duration for input to be considered as valid. Should be used for input events of held type. Unused if zero. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (ClampMin = 0, UIMin = 0))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (ClampMin = 0, UIMin = 0), Category = "Input Buffer")
 	float MinDuration;
 
 	/* Maximal duration for input to be considered as valid. Should be used for input events of held type. Unused if zero. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (ClampMin = 0, UIMin = 0))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (ClampMin = 0, UIMin = 0), Category = "Input Buffer")
 	float MaxDuration;
 
 	/* Minimal time limit between input for this entry and the next one to be considered as valid. Unused if zero. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (ClampMin = 0, UIMin = 0))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (ClampMin = 0, UIMin = 0), Category = "Input Buffer")
 	float MinInterval;
 
 	/* Maximal time limit between input for this entry and the next one to be considered as valid. Unused if zero. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (ClampMin = 0, UIMin = 0))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (ClampMin = 0, UIMin = 0), Category = "Input Buffer")
 	float MaxInterval;
 
 	FORCEINLINE bool CheckDuration(float Duration) const
@@ -83,11 +83,11 @@ struct FInputCommandSequence
 	FInputCommandSequence() : bEnabled(true) {}
 
 	/** Whether this sequence is enabled. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input Buffer")
 	bool bEnabled;
 
 	/* A list of input snapshots to match. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input Buffer")
 	TArray<FInputCommandEntry> Entries;
 };
 
@@ -103,15 +103,15 @@ class INPUTBUFFER_API UInputCommand : public UObject
 public:
 
 	/* Time limit of valid input. Unused if zero. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, AssetRegistrySearchable, Meta = (ClampMin = 0, UIMin = 0))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, AssetRegistrySearchable, Meta = (ClampMin = 0, UIMin = 0), Category = "Input Buffer")
 	float TimeLimit;
 
 	/* Input events to ignore. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input Buffer")
 	TArray<FName> EventsToIgnore;
 
 	/* Each sequence contains a series of input snapshots to match. A command is considered matched if any of its sequences matches. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input Buffer")
 	TArray<FInputCommandSequence> Sequences;
 
 #if WITH_EDITORONLY_DATA

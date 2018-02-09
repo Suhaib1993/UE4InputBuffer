@@ -28,23 +28,23 @@ struct FInputHistoryRecord
 	{}
 
 	/** Whether this record is valid. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Input Buffer")
 	uint32 bValid : 1;
 
 	/** Time when we start to record it. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input Buffer")
 	float StartTime;
 
 	/** Time when we stop recording it. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input Buffer")
 	float EndTime;
 
 	/** Input events list. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input Buffer")
 	TArray<FName> Events;
 
 	/** Input events that are translated from. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input Buffer")
 	TArray<FName> TranslatedEvents;
 
 	FORCEINLINE bool operator == (const FInputHistoryRecord& RHS) const

@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include "ThumbnailRendering/DefaultSizedThumbnailRenderer.h"
 #include "InputCommandThumbnailRenderer.generated.h"
 
 UCLASS()

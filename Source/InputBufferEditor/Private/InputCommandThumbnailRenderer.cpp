@@ -1,7 +1,8 @@
 // Copyright 2017 Isaac Hsu. MIT License
 
-#include "InputBufferEditor.h"
 #include "InputCommandThumbnailRenderer.h"
+#include "InputBufferEditor.h"
+
 #include "InputCommand.h"
 
 UTexture2D* UInputCommandThumbnailRenderer::DefaultTexture;
